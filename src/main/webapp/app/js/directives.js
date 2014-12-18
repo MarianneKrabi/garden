@@ -24,7 +24,7 @@ dir.directive('drawing', function($parse) {
       var scale = 2;
 
       var backgroundImage = new Image();
-      backgroundImage.src = "gras.jpg";
+      backgroundImage.src = "app/img/gras.jpg";
 
       var context2D = elm[0].getContext('2d');
 

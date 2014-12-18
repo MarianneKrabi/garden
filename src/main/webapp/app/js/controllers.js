@@ -24,19 +24,19 @@ function PlantDetailCtrl($scope, $location, $routeParams, Plant) {
         if (newValue === "2") {
             $scope.plant = {
                 name: "Daisy",
-                imagePath: "daisy.gif",
+                imagePath: "app/img/daisy.gif",
                 createDate: new Date()
             };
         } else if (newValue === "1"){
             $scope.plant = {
                 name : "Flower",
-                imagePath : "joannaFlowanna.gif",
+                imagePath : "app/img/joannaFlowanna.gif",
                 createDate: new Date()
             };
         } else {
             $scope.plant = {
                 name: "Tulip",
-                imagePath: "tulip.gif",
+                imagePath: "app/img/tulip.gif",
                 createDate: new Date()
             };
         }
