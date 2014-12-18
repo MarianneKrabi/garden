@@ -15,8 +15,6 @@ public class PlantServiceTest extends BaseTestClass {
     @Mock
     private EntityManager entityManager;
 
-    private List
-
     @Before
     public void before() {
         plantService = new PlantService();
