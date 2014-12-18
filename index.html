@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-ng-app="garden">
+<head>
+  <meta charset="utf-8">
+  <title>Garden</title>
+  <link rel="stylesheet" href="app/css/app.css" />
+  <link rel="stylesheet" href="app/lib/bootstrap/css/bootstrap.css" type="text/css" media="screen" charset="utf-8">
+
+  <style>
+    body {
+      padding-top: 60px;
+      /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+        <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </a> <a class="brand" href="#">My Garden</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#/plant-list">Overview</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div data-ng-view>
+    <!-- Content is rendered here -->
+
+  </div>
+  <hr/>
+  <div>
+    Garden: v<span app-version></span>
+  </div>
+
+</div>
+
+<script src="app/lib/jquery/jquery.min.js"></script>
+<script src="app/lib/bootstrap/js/bootstrap.js"></script>
+<script src="app/lib/angular/angular.js"></script>
+<script src="app/lib/angular/angular-resource.js"></script>
+<script src="app/js/app.js"></script>
+<script src="app/js/services.js"></script>
+<script src="app/js/controllers.js"></script>
+<script src="app/js/filters.js"></script>
+<script src="app/js/directives.js"></script>
+
+</body>
+
+</html> 
