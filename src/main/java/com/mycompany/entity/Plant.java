@@ -1,8 +1,6 @@
 package com.mycompany.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -19,6 +17,7 @@ public class Plant {
     private String imagePath;
     private Integer xposition;
     private Integer yposition;
+    @Temporal(TemporalType.DATE)
     private Date createDate;
 
     /**
@@ -68,4 +67,32 @@ public class Plant {
     public Date getCreateDate() { return createDate; }
 
     public void setCreateDate(Date date) { this.createDate = date; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Plant plant = (Plant) o;
+
+        if (createDate != null ? !createDate.equals(plant.createDate) : plant.createDate != null) return false;
+        //if (id != null ? !id.equals(plant.id) : plant.id != null) return false;
+        if (imagePath != null ? !imagePath.equals(plant.imagePath) : plant.imagePath != null) return false;
+        if (name != plant.name) return false;
+        if (xposition != null ? !xposition.equals(plant.xposition) : plant.xposition != null) return false;
+        if (yposition != null ? !yposition.equals(plant.yposition) : plant.yposition != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (imagePath != null ? imagePath.hashCode() : 0);
+        result = 31 * result + (xposition != null ? xposition.hashCode() : 0);
+        result = 31 * result + (yposition != null ? yposition.hashCode() : 0);
+        result = 31 * result + (createDate != null ? createDate.hashCode() : 0);
+        return result;
+    }
 }

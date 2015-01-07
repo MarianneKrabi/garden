@@ -19,12 +19,11 @@ import java.util.List;
 public class PlantResource {
 
     @Inject
-    private PlantService plantService;
+    PlantService plantService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response findPlants(@QueryParam("searchString") String searchString,
-                                  @QueryParam("name") String name) {
+    public Response findPlants(@QueryParam("searchString") String searchString) {
         List<Plant> plants;
         if (searchString != null) {
             plants = plantService.findPlants(searchString);
